@@ -129,13 +129,13 @@ Adam's algorithm is basically putting RMSprop and Gradient Descent with Momentum
 
 This algorithm has a number of hyperparameters: 
 
-$\quad \circ \ \alpha$ : Needs to be tuned
+$\quad \circ \alpha$ : Needs to be tuned
 
-$\quad \circ \ \beta_1$ : 0.9 (moving average of weighted average of $dW$). Can tune but not done as often
+$\quad \circ \beta_1$ : 0.9 (moving average of weighted average of $dW$). Can tune but not done as often
 
-$\quad \circ \ \beta_2$ : 0.999 (moving average of weighted average of $dW^2$). Can tune but not done as often
+$\quad \circ \beta_2$ : 0.999 (moving average of weighted average of $dW^2$). Can tune but not done as often
 
-$\quad \circ \ \epsilon$ : recommended $10^{-8}$
+$\quad \circ \epsilon$ : recommended $10^{-8}$
 
 The name ADAM comes from Adaptive Moment Estimation. Computing $\beta_1$ is called the first moment and computing $\beta_2$ is called the second moment.
 

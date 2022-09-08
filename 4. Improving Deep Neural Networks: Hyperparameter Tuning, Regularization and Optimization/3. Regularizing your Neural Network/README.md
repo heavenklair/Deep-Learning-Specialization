@@ -4,20 +4,13 @@ If we suspect that we have a high variance problem, one of the thing that we can
 
 Let's develop idea around **Logistic Regression**.
 
-We had the cost function as $J(w,b) = \frac{1}{m} \sum_{i=1}^{m} L(\hat{y}^{(i)}, y^{(i)})$ and we want to minimize it as $\underset{w,b}{\text{min}} J(w,b)$ where $w$ is an x-dimensional parameter vector ($w \in R^{n_x}$), and $b$ is a real number.
+We had the cost function as $J(w,b) = \frac{1}{m} \sum_{i=1}^{m} L(\hat{y}^{(i)}, y^{(i)})$ and we want to minimize it as $\underset{w,b}{\text{min}} J(w,b)$ where $w$ is an x-dimensional parameter vector $w \in R^{n_x}$, and $b$ is a real number.
 
 To add regularization to logistic regression, we add lambda which is called the regularziation parameter.
 
 $$ J(w,b) = \frac{1}{m} \sum_{i=1}^{m} L(\hat{y}^{(i)}, y^{(i)}) + \frac{\lambda}{2m} ||w^2||_2 $$
 
-where $||w^2||_2 = \sum_{j=1}^{n_x} w_j^2 = w^T\cdot w $
-
-
-#####################
-
-Check above paragraph
-
-#####################
+where $||w^2||_2 = \sum_{j=1}^{n_x} w_j^2 = w^T\cdot w$
 
 The above is called the $L_2$ regularization.
 
@@ -31,13 +24,8 @@ $\lambda$ is another hyperparameter that you might have to tune. For the program
 
 Now lets develop the idea of regularization around the **Neural Networks**
 
-We have the cost function as $J(w^{[1]},b^{[1]}, \ldots , w^{[L]}, b^{[L]}) = \frac{1}{m} \sum\limits_{i=1}^{m} L(\hat{y}^{(i)}, y^{(i)}) + \frac{\lambda}{2m} \sum\limits_{i=1}^{L} ||w^{[L]}||^2 $ where $||w^{[L]}||^2 = \sum\limits_{i=1}^{n^{[l]}} \sum\limits_{j=1}^{n^{[l-1]}} (w_{i,j}^{[l]} )^2 $
+We have the cost function as $J(w^{[1]},b^{[1]}, \ldots , w^{[L]}, b^{[L]}) = \frac{1}{m} \sum\limits_{i=1}^{m} L(\hat{y}^{(i)}, y^{(i)}) + \frac{\lambda}{2m} \sum\limits_{i=1}^{L} ||w^{[L]}||^2 $ where $||w^{[L]}||^2 = \sum\limits_{i=1}^{n^{[l]}} \sum\limits_{j=1}^{n^{[l-1]}} (w_{i,j}^{[l]} )^2$
 
-###############
-
-Check above 
-
-###############
 
 This matrix norm $||w^{[l]}||^2$ is called the Frobenius Norm of a Matrix, denoted F in the subscript.
 
@@ -47,7 +35,7 @@ Previously, we would complete $dw$ using backprop, where backprop would give us 
 
 $dw = (\text{from BackProp})\qquad \frac{ \partial J }{ \partial w^{[l]} }$
 
-Then we update $w^{[l]} = w^{[l]} - \alpha \cdot dw^{[l]} $.
+Then we update $w^{[l]} = w^{[l]} - \alpha \cdot dw^{[l]}$.
 
 Now we will add the regularization terms to the above equations to compensate for the regularziation parameters.
 
