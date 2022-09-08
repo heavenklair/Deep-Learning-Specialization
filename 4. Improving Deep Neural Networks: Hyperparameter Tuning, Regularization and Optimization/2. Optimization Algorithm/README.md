@@ -61,14 +61,13 @@ In python
 
 $$ \text{Set } v_{\theta} = 0 $$
 
-$$ \text{Repeat}  $$
+$$ \text{Repeat} [ $$
 
 $$ \quad \text{Get next }\theta_t $$
 
 $$ \quad v_{\theta} := \beta v_{\theta} + (1-\beta)\theta_t $$
 
-$ \}$
-
+$$ ] $$
 ## Bias Correction in Exponentially Weighted Averages
 
 Since the first term is set to equal to 0, it is contributing in some bias. The graph of the weight averages will start from 0 which is quite not right. The actual graph will not start from 0, but might start from some other number. To correct this, we will use something as below: 
