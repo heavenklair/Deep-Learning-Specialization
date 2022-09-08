@@ -61,13 +61,13 @@ In python
 
 $$ \text{Set } v_{\theta} = 0 $$
 
-$$ \text{ Repeat } \{  $$
+$$ \text{Repeat} \{  $$
 
 $$ \quad \text{Get next }\theta_t $$
 
 $$ \quad v_{\theta} := \beta v_{\theta} + (1-\beta)\theta_t $$
 
-$$ \} $$
+$$ } $$
 
 ## Bias Correction in Exponentially Weighted Averages
 
@@ -200,6 +200,6 @@ $$ \alpha = \frac{k}{ \sqrt{t} } \cdot \alpha_0 \quad $$
 
 In high dimensions, it is possible to get a saddle point or even multiple of them. It is also quiet possible to get a plateaus (surface where the derivative is zero for a long time).
 
-$\quad \circ \ $ Even tho, it is unlikely to get stuck in a bad local optima.
+$\quad \circ$ Even tho, it is unlikely to get stuck in a bad local optima.
 
-$\quad \circ \ $ Plateaus can make learning slow.
+$\quad \circ$ Plateaus can make learning slow.

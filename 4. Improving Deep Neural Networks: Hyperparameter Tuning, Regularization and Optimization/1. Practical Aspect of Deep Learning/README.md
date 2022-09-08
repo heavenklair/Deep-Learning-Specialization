@@ -2,16 +2,6 @@
 
 Since I had to write mathematical expression in latex, I used Jupyter notebook for that purpose. Use Introduction file above as a README. 
 
-
-
-
-#################################################
-
-Same as before 
-
-#################################################
-
-
 # Train / Dev / Test Sets
 
 For a lot of applications in deep learning, it is almost impossible to guess/get the values of hyperparameters correctly the first time. So, the applied deep learning is a very iterative process where we have to go around a cycle of "Idea", "Code" and "Experiment", and find a good choice of network for our application.
