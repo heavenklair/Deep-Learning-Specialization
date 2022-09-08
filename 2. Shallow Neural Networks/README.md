@@ -14,15 +14,9 @@ Topics covered in the notes:
 * Gradient Descent for Neural Networks
 * Random Initialization 
 
-###########################################
-
-Below this contains the README converted from ipynb noteboook. Lets see if this works
-
-###########################################
-
 The neural networks looks like the following: 
 
-![img1.jpeg](Images/img1.jpeg)
+![Blank](/2.%20Shallow%20Neural%20Networks/images/img1.png)
 
 The central node corresponds the z-like calculation like $z = w^Tx + b$ as as well as a-like calculation, $a=\sigma(z)$. The next node on the right, in the second layer also corresponds a similar z-like and a-like calculations.
 
@@ -30,11 +24,11 @@ The first layes is called the input layer and is not considered to be the first 
 
 Previously, we used $X =$ matrix containing the values os $x^{(i)}$. Here, we will change the notation a bit and will call $a^[0] = X$ for the input layer. This term "a" also stands for activations. 
 
-![img2.jpeg](Images\img2.jpeg)
+![Blank](/2.%20Shallow%20Neural%20Networks/images/img2.png)
 
 The superscript represents the layer the calculations are being performed. We can write $a^{[1]} = [a^{[1]} \ a^{[2]} \ a^{[3]} ]^T$
 
-![img3.jpeg](Images/img3.jpeg)
+![Blank](/2.%20Shallow%20Neural%20Networks/images/img3.png)
 
 As we studied in the first section, the circle in the logistic regression represents two steps of computations: we compute $z = w^T x+ b$ and $a = \sigma(z)$. So a neural network does this a lot more times.
 
@@ -52,7 +46,7 @@ $$ z_4^{[1]} = w_4^{[1]T}x + b_4^{[1]}, \quad a_4^{[1]} = \sigma(z_4^{[1]})$$
 
 We can vectorize this above system of equations as 
 
-![Matrix image 1](Images/matrix_1.png)
+![Blank](/2.%20Shallow%20Neural%20Networks/images/matrix_1.png)
 
 The above layer was the hidden layer or the first layer. Now lets talk about the second layer
 
@@ -80,7 +74,7 @@ $$ z^{[2]} = w^T X + b^{[2]} $$
 
 $$ A^{[2]} = \sigma(z^{[2]})$$
 
-![Matrix image 2](Images/matrix_2.png)
+![Blank](/2.%20Shallow%20Neural%20Networks/images/matrix_2.png)
 
 One property of this notation is that this matrices, Z and A is that horizontally, we are going to index across training examples and vertically we are going to index acorss different nodes in the neural network. For example, the $(1,1)$ index in the A matrix corresponds to the first hidden unit on the first training example. The index $(2,1)$ in the matrix A corresponds to the acitivation in the second hidden layer on the first training example. The simliar intuition corresponds to the matrices of Z and X.
 
@@ -118,7 +112,7 @@ Rules of thumb for choosing the acitivaion functions:
 
 One disadvantange of ReLu is that the derivative is equal to 0 when z is negative. In practice this works just fine. But there is another version of the value called the Leaky ReLU.
 
-![ReLU figure](Images/img4.jpeg)
+![Blank](/2.%20Shallow%20Neural%20Networks/images/img4.png)
 
 Either one works fine as both works equivalently good in pracitice.
 
@@ -180,14 +174,13 @@ $$ = 1- (tanh(z))^2\\ $$
 
 * ReLu
 
-![Piecewise Function of ReLU](Images/piecewise_function_1.png)
+![Piecewise Function of ReLU](/2.%20Shallow%20Neural%20Networks/images/piecewise_function_1.png)
 
 Take $g'(z)$ at $z=0$ to be 0.
 
 * Leaky ReLu
 
-![Piecewise Function of ReLU](Images/piecewise_function_2.png)
-
+![Piecewise Function of ReLU](/2.%20Shallow%20Neural%20Networks/images/piecewise_function_2.png)
 ## Gradient Descent for Neural Networks
 
 The Neural network with a single hidden layer will have the following parameters: 
@@ -231,7 +224,7 @@ $$ w^{[2]} = w^{[2]} - \alpha\ dw^{[2]}$$
 
 $$b^{[2]} = b^{[2]} - \alpha\ db^{[2]}$$ 
 
-$$ \} $$
+$$ } $$
 
 We already know how to compute predictions, so the key is to know how to calculate partial derivatives
 
