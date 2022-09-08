@@ -4,13 +4,13 @@
 
 One of the techniques to speed up the algorithm while training is if we normalize our inputs. Normalizing has 2 steps: 
 
-$\quad \circ \ $ Subtract mean: 
+$\quad \circ$ Subtract mean: 
 
 $$ \mu = \frac{1}{m} \sum_{i=1}^{m} x^{(i)} $$
 
 $$ x:= x - \mu $$
 
-$\quad \circ \ $ Normalize Variance: 
+$\quad \circ$ Normalize Variance: 
 
 $$ \sigma^2 = \frac{1}{m} \sum_{i=1}^{m} x^{(i)} ** 2 $$
 
@@ -52,11 +52,11 @@ When we implement back propagation, there is test called gradient checking that 
 
 **Gradient Checck for a Neural Netowrk** 
 
-$\quad \circ \ $ Take $W^{[i]},\ b^{[i]}$ and reshape them into a big vector $\theta.$ Since $W^{[i]}$ will be a matrix, it will be transformed into a vector. 
+$\quad \circ$ Take $W^{[i]},\ b^{[i]}$ and reshape them into a big vector $\theta.$ Since $W^{[i]}$ will be a matrix, it will be transformed into a vector. 
 
-$\quad \circ \ $ Doing so will give us the cost function, $J$ in terms of $\theta$.
+$\quad \circ$ Doing so will give us the cost function, $J$ in terms of $\theta$.
  
-$\quad \circ \ $ Take $dW^{[i]},\ db^{[i]}$ and reshape them into a big vector $d\theta.$ Since $dW^{[i]}$ will be a matrix, it will be transformed into a vector. 
+$\quad \circ$ Take $dW^{[i]},\ db^{[i]}$ and reshape them into a big vector $d\theta.$ Since $dW^{[i]}$ will be a matrix, it will be transformed into a vector. 
 
 
 The question: Is $d\theta$ the graident/slope of the cost function $J$?
@@ -82,12 +82,12 @@ In practice, we can use $\epsilon = 10^{-7}$. With this value of $\epsilon$ if w
 
 ## Gradient Checking Implementation Notes
 
-$\quad \circ \ $ Do not use Gradient checking in training. Use it only to debug
+$\quad \circ$ Do not use Gradient checking in training. Use it only to debug
 
-$\quad \circ \ $ If an algorithm fails a grad check, look at components to try to identify the bug.
+$\quad \circ$ If an algorithm fails a grad check, look at components to try to identify the bug.
 
-$\quad \circ \ $ Remember Regularization: During grad check, remember your regularization term if youre using regularization
+$\quad \circ$ Remember Regularization: During grad check, remember your regularization term if youre using regularization
 
-$\quad \circ \ $ Grad check doesnt work with dropout. One thing we can do is peform grad check without dropout, and if it is correct, then turn the dropouts afterwards.
+$\quad \circ$ Grad check doesnt work with dropout. One thing we can do is peform grad check without dropout, and if it is correct, then turn the dropouts afterwards.
 
-$\quad \circ \ $ Run at random intialization; perhaps again after some training: 
+$\quad \circ$ Run at random intialization; perhaps again after some training: 
