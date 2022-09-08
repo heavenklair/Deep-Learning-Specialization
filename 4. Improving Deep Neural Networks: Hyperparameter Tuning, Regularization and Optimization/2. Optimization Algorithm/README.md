@@ -36,13 +36,13 @@ The plot of cost vs mini-batch iterations is going to be nosier but will still d
 
 One of the parameter we need to **choose is the size of the mini-batch**. The ideal size to choose is in between 1 and m. If we choose m as the size of the mini-batch, then we are just taking the whole dataset, and it is equal to doing Batch Gradient Descent. If we choose the size to be 1, then we are only taking one example at a time and that would be equal to doing a Stochastic Gradient Descent. 
 
-$\quad \circ \$ If we have a small training set (less than 2000 examples) - Use Batch Gradient Descent.
+$\quad \circ$ If we have a small training set (less than 2000 examples) - Use Batch Gradient Descent.
 
-$\quad \circ \$ If we have a large training set (larger than 2000 examples) - Use mini-batch Gradient Descent.
+$\quad \circ$ If we have a large training set (larger than 2000 examples) - Use mini-batch Gradient Descent.
 
-$\quad \circ \$ Typical sizes of Mini-Batch are of the power of 2: $64,\ 128,\ 256, \ 512$
+$\quad \circ$ Typical sizes of Mini-Batch are of the power of 2: $64,\ 128,\ 256, \ 512$
 
-$\quad \circ \$ Make sure mini-batch fir in CPU/GPU memory
+$\quad \circ$ Make sure mini-batch fir in CPU/GPU memory
 
 ## Exponentially Weighted Averages
 
@@ -84,9 +84,9 @@ There is an algorithm that works better and faster than normal Gradient Descent,
 
 Algorithm is as follows: 
 
-$ \text{On iteration } t: $ 
+$ \text{On iteration} t: $ 
 
-$$  \text{Compute }dW^{\{t\}}, db^{\{t\}} \text{ on current mini-batch} $$
+$$ \text{Compute }dW^{\{t\}}, db^{\{t\}} \text{ on current mini-batch} $$
 
 $$ \text{Compute } V_{dw} = \beta V_{dw} + (1-\beta)dW $$
 
