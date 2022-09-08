@@ -27,10 +27,6 @@ Lets say we are trying to predict whether an image has a car in it. For that, we
 There is a huge disadvantage of Sliding Windows Detection, which is the computational cost because we are cropping out so many different square regions in the image and running each of them independently through a ConvNet. If we use a very big stride, then it will reduce the number of windows we need to pass through the ConvNet, but that may hurt performance. Whereas if we use a very small stride, then the huge number of all the little regions we are passing through the ConvNet means that there is a very high computational cost.
 
 
-## Convolutional Implementation of Sliding Windows
-
-## INSERT IMAGE HERE 
-
 ## Bounding Box Prediction
 
 An good algorithm for accurate bounding box prediction is YOLO algorithm (You only look once). In actual implementation we use a grid of 19 x 19 and place the grid on the input image. The basic idea is that we use the image classification and localization algorithm from above, and apply it to each of the grid cells in the image.
@@ -107,21 +103,21 @@ Then for the number of classes you have, for each of those classes, independentl
 
 The goal of Semantic Segmentation is to draw a careful outline around the object that is detected so that we know exactly which pixels belong to the object and which pixels don't. 
 
-## Insert the semantic seg image here (Draw it first)
+![semantic_segmentation](images/Semantic_Segmentation.jpeg)
 
 In the ConvNet Architeture we have looked so, as we go left to right, the width and length decrease and the depth increases. In the Semantic Segmentation, after a certain number of layers, the length and width starts to increase back to the origianl input shape and the depth starts to decrease to the original shape. 
 
 The reversal of the shape is done through transpose convolutions.
 
-## INsert normal convultion image
+![Normal_convolution](images/Normal_convolution.png)
 
 Here is what transpose convolution does
-## INsert transpose convultion example image
+![transpose_convolution_example](images/transpose_convolution_example.png)
 
 ## U-Net Architecture
 
 The is the architecture of a U-Net 
 
-*****Insert the image of architect here 
+![U_Net](images/U_Net.jpg)
 
 Skip connection is not a part of the U-Net but we can add it to get better and more accurate predictions. We can copy the block of activations from the first block directly to the second to last block
