@@ -61,13 +61,13 @@ In python
 
 $$ \text{Set } v_{\theta} = 0 $$
 
-$$ \text{Repeat} \{  $$
+$$ \text{Repeat}  $$
 
 $$ \quad \text{Get next }\theta_t $$
 
 $$ \quad v_{\theta} := \beta v_{\theta} + (1-\beta)\theta_t $$
 
-$$ } $$
+$ \}$
 
 ## Bias Correction in Exponentially Weighted Averages
 
