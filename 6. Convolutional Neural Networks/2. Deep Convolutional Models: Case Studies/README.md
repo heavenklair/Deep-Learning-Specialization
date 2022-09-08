@@ -61,7 +61,7 @@ The NN that we discussed so far are quiet computationally expensive. Using Mobil
 
 The normal convolution looks like: 
 
-![Normal Convolution](images/normal_convolution.jpeg)
+![Normal Convolution](images/Normal_convolution.jpeg)
 
 The computational cost is : # of filter parameters x # filter positions x # of filters
 
